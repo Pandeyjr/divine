@@ -1,13 +1,21 @@
-import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Footer from "./components/Footer"; // ✅ import Footer here
+import CollegeUniversity from "./pages/CollegeAndUni";
+import Footer from "./components/Footer";
+import AboutUsPage from "./pages/AboutUs";
 
 function App() {
   return (
-    <div className="bg-white min-h-screen">
-      <Home />
-      <Footer /> {/* ✅ Footer appears after the Home page */}
-    </div>
+    <Router>
+      <div className="bg-white min-h-screen">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/colleges" element={<CollegeUniversity />} />
+          <Route path="/aboutus" element={<AboutUsPage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
