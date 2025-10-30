@@ -162,9 +162,13 @@ const Blogs = () => {
               <span>👤 {blog.author}</span>
               <span>{blog.date}</span>
             </div>
-            <button className="w-full bg-[#3856B2] text-white text-sm py-2 rounded-md hover:bg-[#2f4aa3] transition duration-300">
-              Learn More
-            </button>
+            <Link
+  to={`/blogs/${blog.id}`}
+  className="block text-center w-full bg-[#3856B2] text-white text-sm py-2 rounded-md hover:bg-[#2f4aa3] transition duration-300"
+>
+  Learn More
+</Link>
+
           </div>
         </div>
       </div>

@@ -7,6 +7,10 @@ import Home from "./pages/Home";
 import Blogs from "./pages/Blogs";
 import Services from "./pages/Services";
 import ContactUs from "./pages/ContactUs"; // ✅ newly added page
+import BlogDetails from "./pages/BlogDetails";
+import AboutCeo from "./pages/AboutCeo";
+import AboutSection from "./pages/AboutSection";
+
 
 function App() {
   return (
@@ -22,6 +26,9 @@ function App() {
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<ContactUs />} /> {/* ✅ Contact Us Route */}
+            <Route path="/blogs/:id" element={<BlogDetails/>} />
+             <Route path="/ceo-message" element={<AboutCeo/>} />
+         <Route path="/introduction" element={<AboutSection/>} />
           </Routes>
         </div>
 
