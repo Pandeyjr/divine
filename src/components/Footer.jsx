@@ -1,7 +1,7 @@
 import React from "react";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import divinelogo from "../assets/divinesecondlogo.png"; // your logo path
-
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="bg-[#3856B2] text-white pt-10">
@@ -70,15 +70,50 @@ const Footer = () => {
 
         {/* Quick Links */}
         <div>
-          <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
-          <ul className="space-y-2 text-sm text-white/90">
-            <li className="hover:text-[#F9B234] transition">About Us</li>
-            <li className="hover:text-[#F9B234] transition">Services</li>
-            <li className="hover:text-[#F9B234] transition">Stories</li>
-            <li className="hover:text-[#F9B234] transition">Contact Us</li>
-            <li className="hover:text-[#F9B234] transition">Sitemap</li>
-          </ul>
-        </div>
+  <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
+  <ul className="space-y-2 text-sm text-white/90">
+    <li>
+      <Link
+        to="/introduction"
+        className="hover:text-[#F9B234] transition-colors duration-300"
+      >
+        About Us
+      </Link>
+    </li>
+    <li>
+      <Link
+        to="/services"
+        className="hover:text-[#F9B234] transition-colors duration-300"
+      >
+        Services
+      </Link>
+    </li>
+    <li>
+      <Link
+        to="/blogs"
+        className="hover:text-[#F9B234] transition-colors duration-300"
+      >
+        Stories
+      </Link>
+    </li>
+    <li>
+      <Link
+        to="/contact"
+        className="hover:text-[#F9B234] transition-colors duration-300"
+      >
+        Contact Us
+      </Link>
+    </li>
+    <li>
+      <Link
+        to="/contact"
+        className="hover:text-[#F9B234] transition-colors duration-300"
+      >
+        Sitemap
+      </Link>
+    </li>
+  </ul>
+</div>
 
         {/* Legal */}
         <div>
