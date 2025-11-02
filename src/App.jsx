@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import CollegeUniversity from "./pages/CollegeAndUni";
-import Footer from "./components/Footer";
-import AboutUsPage from "./pages/AboutUs";
-=======
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
@@ -17,20 +10,12 @@ import ContactUs from "./pages/ContactUs"; // ✅ newly added page
 import BlogDetails from "./pages/BlogDetails";
 import AboutCeo from "./pages/AboutCeo";
 import AboutSection from "./pages/AboutSection";
-
->>>>>>> upstream/main
+import CollegeAndUni from "./pages/CollegeAndUni";
+import CollegeDetail from "./pages/CollegeDetail";
 
 function App() {
   return (
     <Router>
-<<<<<<< HEAD
-      <div className="bg-white min-h-screen">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/colleges" element={<CollegeUniversity />} />
-          <Route path="/aboutus" element={<AboutUsPage />} />
-        </Routes>
-=======
       <div className="bg-white min-h-screen flex flex-col">
         {/* ✅ Navbar at the top */}
         <Navbar />
@@ -45,11 +30,13 @@ function App() {
             <Route path="/blogs/:id" element={<BlogDetails/>} />
              <Route path="/ceo-message" element={<AboutCeo/>} />
          <Route path="/introduction" element={<AboutSection/>} />
+          <Route path="/colleges" element={<CollegeAndUni/>} />
+          <Route path="/college/:id" element={<CollegeDetail />} />
+
           </Routes>
         </div>
 
         {/* ✅ Footer at the bottom */}
->>>>>>> upstream/main
         <Footer />
       </div>
     </Router>
